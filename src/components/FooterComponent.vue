@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <h1>Footer Component</h1>
+    <h1>Group AD</h1>
   </footer>
 </template>
 

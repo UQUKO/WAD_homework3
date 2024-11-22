@@ -1,11 +1,11 @@
 <template>
   <header class="header">
-    <h1>Header Component</h1>
+    <h1>Group AD</h1>
     <nav>
       <ul class="navigation">
-        <li><a href="#">nav1</a></li>
-        <li><a href="#">nav2</a></li>
-        <li><a href="#">nav3</a></li>
+        <li><router-link to="/">Main</router-link></li>
+        <li><router-link to="/signup">Sign up</router-link></li>
+
       </ul>
     </nav>
   </header>

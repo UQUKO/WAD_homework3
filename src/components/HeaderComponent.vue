@@ -3,7 +3,7 @@
     <h1>Group AD</h1>
     <nav>
       <ul class="navigation">
-        <li><router-link to="/">Main</router-link></li>
+        <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/signup">Sign up</router-link></li>
 
       </ul>

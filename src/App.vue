@@ -34,6 +34,6 @@ export default {
   align-items: center;
   gap: 1em;
   padding: 2em;
-  /* background-color: #9e9e9e; figure 1 on kasutatud seda bg colorit aga kole on imo.*/
+  /*background-color: #9e9e9e; /* figure 1 on kasutatud seda bg colorit aga kole on imo.*/
 }
 </style>

@@ -50,12 +50,14 @@ export default {
 </script>
 
 <style scoped>
-.post {
-  border: 1px solid #ccc;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+.post{
+    border: 1px;
+    padding: 20px;
+    background-color: rgb(173, 225, 176);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    align-content: center;
 }
 
 header {

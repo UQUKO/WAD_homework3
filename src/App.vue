@@ -22,6 +22,9 @@ export default {
 <style>
 .main-page {
   font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 5%;
+  font-size: large;
 }
 
 .content {

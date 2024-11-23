@@ -83,7 +83,7 @@
 form {
   max-width: 420px;
   margin: 30px auto;
-  background:  rgb(167, 154, 154);
+  background-color: rgb(173, 225, 176);
   text-align: left;
   padding: 40px;
   border-radius: 10px;
@@ -106,7 +106,7 @@ width: 100%;
 box-sizing: border-box;
 border: none;
 border-bottom: 1px solid white;
-color: blue;
+color: rgb(10, 74, 74);
 }
 input[type="checkbox"]{
     display: inline-block;
@@ -116,11 +116,11 @@ input[type="checkbox"]{
     top: 2px;
 }
 button{
-background:  rgb(8, 110, 110);
+background-color: rgb(115, 0, 160);
+color: white;
 border: 0;
 padding: 10px 20px;
 margin-top:  20px;
-color: white;
 border-radius: 20px;
 }
 h2, .submit{
@@ -129,12 +129,12 @@ h2, .submit{
 }
 
 button:hover{
-    background:darkcyan;
+    background: rgb(139, 101, 192);
 }
 
 .error{
     color: red;
-    font-size: 0.8em;
+    font-size: 1em;
     margin-top:  10px;
     text-align: center;
 }

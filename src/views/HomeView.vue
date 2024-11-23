@@ -18,13 +18,13 @@ export default {
     PostComponent
   },
   computed: {
-    ...mapGetters(["getData"]), // Map the Vuex getter to get the data
+    ...mapGetters(["getData"]),
     data() {
-      return this.getData; // Use the getter to access data
+      return this.getData; 
     },
   },
   created() {
-    this.$store.dispatch("fetchData"); // Dispatch the action to fetch data
+    this.$store.dispatch("fetchData");
   },
 };
 
@@ -32,8 +32,11 @@ export default {
 
 <style scoped>
 #postsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  display: flex; 
+  flex-direction: column; 
+  gap: 1em; 
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh;
 }
 </style>

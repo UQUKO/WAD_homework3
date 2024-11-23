@@ -9,13 +9,23 @@
 </template>
 
 <style scoped>
+
 .header {
-  background-color: #9e9e9e;
-  padding: 1em;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  padding: 10px 16px;
+    background-color: rgb(53, 126, 69);
+    width: auto;
+    margin: 1%;
+    height: 10vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 15px;
+    position: sticky;
+    top: 0;
 }
 
 .navigation {

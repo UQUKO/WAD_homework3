@@ -1,14 +1,11 @@
 <template>
-  <header class="header">
+  <div class="header">
     <h1>Group AD</h1>
     <nav>
-      <ul class="navigation">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/signup">Sign up</router-link></li>
-
-      </ul>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/signup">Signup</router-link>
     </nav>
-  </header>
+  </div>
 </template>
 
 <style scoped>
@@ -16,6 +13,9 @@
   background-color: #9e9e9e;
   padding: 1em;
   text-align: center;
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
 }
 
 .navigation {

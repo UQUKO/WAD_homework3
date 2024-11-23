@@ -1,53 +1,105 @@
 <template>
-    <div class="signup-form">
-        <div class="login-text">
-            <!--login form taken from homework 2 and modified-->
-        </div>
-        <form id="loginForm">
-        <!--<form action="index.html"> method="POST" commented this line out because of an error-->
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-            </div>
-    
-            <div class="form-group">
-                <button type="submit" class="submit-button">Signup</button>
-            </div>
-        </form>
-
-    </div>
+  <div>
+      
+    <form @submit.prevent ="validateForm">
+    <h2>Create an account</h2>
+    <label for="email">Email</label>
+    <input type="email" required v-model="email">
+    <label for="password">Password</label>
+    <input type="password" required v-model="password">
+    <div v-if="validatePassword" class="error"> {{validatePassword}}</div>
+  
+  <div class="submit">
+      <button>Sign up </button>
+  </div>
+  </form>
+  
+  
+  </div>
+  
+  
   </template>
   
   <script>
   export default {
     name: "SignUpComponent",
-  };
-  </script>
+
+  data: function() {
+    return {
+   email: '',
+   password: '',
+   role: '',
+   terms: false,
+   validatePassword:'',
+  }},
+  methods: {
+   /* Validate password */
+   validateForm(){
+   console.log('signup is submitted');
+   this.validatePassword = (this.password.length <8 || this.password> 15)? 'password must be between 8-15 chars':''
+   console.log(this.validatePassword);
+   let regex = /[a-z]+[A-Z]+[0-9]+_+/
+   console.log(regex.test(this.password));
+   console.log(this.password);
+   this.validatePassword = regex.test(this.password)? '':'password must contain a combination of Uppercase characters (A-Z), Lowercase characters (a-z), Digits (0-9), and _'
+   }
+  }
+}
+</script>
   
-  <style>
-  .signup-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
-    background-color: lightgreen;
-    margin: auto;
-    width: 25%;
-    border-radius: 25px;
-  }
+<style scoped>
 
-  .form-group{
-    padding: 5px;
-  }
+form {
+  max-width: 420px;
+  margin: 30px auto;
+  background:  rgb(167, 154, 154);
+  text-align: left;
+  padding: 40px;
+  border-radius: 10px;
+}
 
-  .form-group label{
-    padding-right: 5px;
-  }
+label {
+    color: rgb(8, 110, 110);
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
 
-  </style>
+input{
+display: block;
+padding: 10px 6px;
+width: 100%;
+box-sizing: border-box;
+border: none;
+border-bottom: 1px solid white;
+color: blue;
+}
+input[type="checkbox"]{
+    display: inline-block;
+    width: 16px;
+    margin:  0 10px 0 0;
+    position: relative;
+    top: 2px;
+}
+button{
+background:  rgb(8, 110, 110);
+border: 0;
+padding: 10px 20px;
+margin-top:  20px;
+color: white;
+border-radius: 20px;
+}
+h2, .submit{
+    text-align: center;
+}
+.error{
+    color: red;
+    font-size: 0.8em;
+    margin-top:  10px;
+    text-align: center;
+}
+</style>
   

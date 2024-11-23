@@ -10,14 +10,10 @@
     <div v-if="validatePassword" class="error"> {{validatePassword}}</div>
   
   <div class="submit">
-      <button>Sign up </button>
+      <button>Sign up</button>
   </div>
   </form>
-  
-  
   </div>
-  
-  
   </template>
   
   <script>
@@ -35,14 +31,49 @@
   methods: {
    /* Validate password */
    validateForm(){
-   console.log('signup is submitted');
-   this.validatePassword = (this.password.length <8 || this.password> 15)? 'password must be between 8-15 chars':''
-   console.log(this.validatePassword);
-   let regex = /[a-z]+[A-Z]+[0-9]+_+/
-   console.log(regex.test(this.password));
-   console.log(this.password);
-   this.validatePassword = regex.test(this.password)? '':'password must contain a combination of Uppercase characters (A-Z), Lowercase characters (a-z), Digits (0-9), and _'
-   }
+    console.log('signup is submitted');
+    let lengthError = this.validateLength(this.password);
+    let uppercaseError = this.validateUppercase(this.password);
+    let digitError = this.validateDigit(this.password);
+    let underscoreError = this.validateUnderscore(this.password);
+    let startUppercaseError = this.validateStartUppercase(this.password);
+    let lowercaseError = this.validateLowercase(this.password);
+    
+    if (!uppercaseError && !digitError && !underscoreError && !startUppercaseError && !lowercaseError && !lengthError) {
+        this.validatePassword = '';
+        this.$router.push('/');
+    } else {
+        this.validatePassword = uppercaseError || digitError || underscoreError || startUppercaseError || lowercaseError || lengthError;
+    }   },
+
+    validateLength(password){
+        return (password.length >= 8 && password.length <= 15) ? "": "Password must be between 8-15 characters";
+    },
+
+    validateUppercase(password){
+        let regex = /[A-Z]/;
+        return regex.test(password) ? "" : "Password has to include at least 1 uppercase alphabet letter";
+    },
+
+    validateStartUppercase(password){
+        let regex = /[A-Z]/;
+        return regex.test(password[0]) ? "" : "Password should start with an uppercase letter";
+    },
+
+    validateDigit(password){
+        let regex = /[0-9]/;
+        return regex.test(password) ? "" : "Password should include at least one numeric value";
+    },
+
+    validateUnderscore(password){
+        let regex = /_/;
+        return regex.test(password) ? "" : "Password should include the character '_'";
+    },
+
+    validateLowercase(password){
+        let regex = /([a-z].*?[a-z])/;
+        return regex.test(password) ? "" : "Password should include at least two lowercase alphabet letters"
+    }
   }
 }
 </script>
@@ -94,7 +125,13 @@ border-radius: 20px;
 }
 h2, .submit{
     text-align: center;
+    
 }
+
+button:hover{
+    background:darkcyan;
+}
+
 .error{
     color: red;
     font-size: 0.8em;

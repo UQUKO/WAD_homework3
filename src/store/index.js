@@ -2,6 +2,7 @@
 
 import { createStore } from 'vuex'
 import data from "@/data/posts.json"
+import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
   state: {
@@ -46,5 +47,10 @@ export default createStore({
       commit("resetAllLikes");
     },
   },
+  plugins: [
+    createPersistedState({
+      storage: window.sessionStorage,
+    })
+  ],
   modules: {}
 });

@@ -2,7 +2,7 @@
   <div id="postsContainer">
     <post-component
       v-for="post in data"
-      :key="post.dateCreated"
+      :key="post.id"
       :post="post"
     />
   </div>
@@ -24,7 +24,9 @@ export default {
     },
   },
   created() {
-    this.$store.dispatch("fetchData");
+    if (this.getData.length === 0) {
+      this.$store.dispatch("fetchData");
+    }
   },
 };
 

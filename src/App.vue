@@ -52,17 +52,6 @@ export default {
   right: 1em;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  padding: 2em;
-  background-color: cornsilk;
-  width: 100%;
-  box-sizing: border-box;
-}
-
 header-component, footer-component {
   width: 100%;
 }

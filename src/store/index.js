@@ -1,7 +1,7 @@
 // store.js
 
 import { createStore } from 'vuex'
-import data from "@/data/posts.json"
+//import data from "@/data/posts.json"
 import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
@@ -34,7 +34,11 @@ export default createStore({
   actions: {
     async fetchData({ commit }) {
       try {
-        const posts = data;
+        const response = await fetch("https://api.npoint.io/24d406998945ce3f7d36");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const posts = await response.json(); 
         commit("setData", posts);
       } catch (error) {
         console.error("Error fetching data:", error);

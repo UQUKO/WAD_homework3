@@ -7,7 +7,7 @@
     </header>
 
     <!-- Post Text -->
-    <p v-html="formattedText"></p>
+    <p v-html="formattedText" class="post-text"></p>
 
     <!-- Post Image -->
     <img v-if="post.postImage" :src="post.postImage" alt="Couldn't load image" width="300" class="postImg"/>
@@ -74,8 +74,8 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-
 .post {
+  font-family: 'Roboto', sans-serif;
   border: 1px;
   padding: 20px;
   background-color: rgb(173, 225, 176);
@@ -87,6 +87,10 @@ export default {
 
 .postImg {
   margin: 0.5em 0em 1em 0em;
+}
+
+.post span {
+  font-size: 0.85em;
 }
 
 header {
@@ -104,8 +108,13 @@ header img {
   cursor: pointer;
 }
 
+.post-text {
+  font-size: 1.15em;
+  font-weight: 400;
+}
+
 .post-likes p {
-  font-family: 'Roboto', sans-serif;
+  font-size: 1.25em;
   margin: 0;
 }
 

@@ -37,7 +37,7 @@ export default {
 .side-rectangle {
   position: absolute;
   top: 9em;
-  bottom: 10em;
+  bottom: 9em;
   width: 20%;
   background-color: rgb(252, 226, 230);
   border-radius: 20px;

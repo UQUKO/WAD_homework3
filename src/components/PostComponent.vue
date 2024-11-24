@@ -72,8 +72,6 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
 .post {
   font-family: 'Roboto', sans-serif;
   border: 1px;
@@ -83,6 +81,7 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 50%;
   align-content: center;
+  margin-bottom: 1em;
 }
 
 .postImg {

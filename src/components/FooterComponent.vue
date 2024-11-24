@@ -17,5 +17,6 @@ footer {
     border: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     bottom: 0;
+    margin-top: auto;
 }
 </style>

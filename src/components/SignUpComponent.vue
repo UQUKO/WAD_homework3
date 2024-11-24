@@ -6,7 +6,17 @@
     <label for="email">Email</label>
     <input type="email" required v-model="email">
     <label for="password">Password</label>
-    <input type="password" required v-model="password">
+    <div class="password-container">
+      <input
+        :type="passwordFieldType"
+        id="password"
+        required
+        v-model="password"
+      />
+      <button type="button" @click="togglePasswordVisibility">
+        {{ passwordFieldType === 'password' ? 'Show' : 'Hide' }}
+      </button>
+    </div>
     <div v-if="validatePassword" class="error"> {{validatePassword}}</div>
   
   <div class="submit">
@@ -24,11 +34,17 @@
     return {
    email: '',
    password: '',
+   passwordFieldType: "password",
    role: '',
    terms: false,
    validatePassword:'',
   }},
   methods: {
+    togglePasswordVisibility() {
+      // Toggle between 'password' and 'text' for visibility
+      this.passwordFieldType =
+        this.passwordFieldType === "password" ? "text" : "password";
+    },
    /* Validate password */
    validateForm(){
     console.log('signup is submitted');

@@ -3,29 +3,12 @@
     <div class="footer-text">
       <h1>Group AD</h1>
     </div>
-    
-    <div class="button-container">
-      <button v-if="isMainPage" @click="resetLikes">Reset Likes</button>
-    </div>
   </footer>
 </template>
 
 <script>
 export default {
   name: "FooterComponent",
-  computed: {
-    isMainPage() {
-      return this.$route.name === "home";
-    }
-  },
-  methods: {
-    resetAllLikes: function() {
-      return this.$store.dispatch("resetAllLikes");
-    },
-    resetLikes() {
-      this.resetAllLikes();
-    }
-  }
 };
 </script>
 
@@ -51,22 +34,4 @@ footer {
   margin-left: 0%;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1em;
-  background-color: #45a049;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-.button-container {
-  position: absolute;
-  right: 3em;
-}
 </style>

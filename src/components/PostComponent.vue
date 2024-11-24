@@ -14,17 +14,18 @@
 
     <!-- Like Button -->
     <div class="likes-container">
-      <div class="like" @click="toggleLike">
+      <div class="like" @click="toggleLike(post.id)">
         <img :src="likeButtonImage" alt="Like" width="25" height="25" />
       </div>
 
       <!-- Post Likes -->
       <div class="post-likes">
-        <p>{{ likeAmount }}</p>
+        <p>{{ post.postLikes }}</p>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -36,6 +37,9 @@ export default {
     },
   },
   computed: {
+    getPostById() {
+      return this.$store.getters.getPostById;
+    },
     formattedDate() {
       return new Date(this.post.dateCreated).toLocaleDateString("en-US", {
         month: "short",
@@ -47,26 +51,15 @@ export default {
       return this.post.postText.replace(/\n/g, "<br>");
     },
     likeButtonImage() {
-      return this.isLiked
+      return this.post.isLiked
         ? require('@/assets/youtube-like-button-png-12.png')
         : require('@/assets/youtube-like-button-png-11.png');
     }
   },
-  data() {
-    return {
-      isLiked: false,
-      likeAmount: this.post.postLikes,
-    };
-  },
   methods: {
-    toggleLike() {
-      if (this.isLiked) {
-        this.likeAmount -= 1;
-      } else {
-        this.likeAmount += 1;
-      }
-      this.isLiked = !this.isLiked;
-    },
+    toggleLike(postId) {
+      this.$store.dispatch('toggleLike', postId);
+    }
   },
 };
 </script>

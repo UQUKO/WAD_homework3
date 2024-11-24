@@ -5,10 +5,14 @@ import SignUpComponent from '@/components/SignUpComponent.vue';
 const routes = [
 
   { path: '/',
-    component: HomeView },
+    name: 'home',
+    component: HomeView
+  },
   { 
     path: '/signup', 
-    component: SignUpComponent },
+    name: 'signup',
+    component: SignUpComponent 
+  },
 ]
 
 const router = createRouter({

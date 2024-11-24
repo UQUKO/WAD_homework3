@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2024-10-28T14:30:00",
@@ -8,6 +9,7 @@
         "postImage": "Tartu Old Town_Tarmo Haud.jpg"
     },
     {
+        "id": 1,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2024-10-27T10:15:00",
@@ -15,6 +17,7 @@
         "postLikes": -1
     },
 	{
+        "id": 2,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2024-10-25T17:40:00",
@@ -22,6 +25,7 @@
         "postLikes": 0
 	},
     {
+        "id": 3,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2024-10-25T17:45:00",
@@ -30,6 +34,7 @@
         "postImage": "1_5gJzummAqpBDGATo0fjU6Q.jpg"
     },
     {
+        "id": 4,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2024-10-20T19:00:00",
@@ -37,6 +42,7 @@
         "postLikes": 100
     },
     {
+        "id": 5,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-12-07T19:00:00",
@@ -44,6 +50,7 @@
         "postLikes": 67
     },
     {
+        "id": 6,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-12-06T19:00:00",
@@ -51,6 +58,7 @@
         "postLikes": 23
     },
     {
+        "id": 7,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-12-05T19:00:00",
@@ -58,6 +66,7 @@
         "postLikes": 21
     },
     {
+        "id": 8,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-12-04T19:00:00",
@@ -65,6 +74,7 @@
         "postLikes": 88
     },
     {
+        "id": 9,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-12-03T19:00:00",
@@ -72,6 +82,7 @@
         "postLikes": 8008
     },
     {
+        "id": 10,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-12-02T19:00:00",
@@ -79,6 +90,7 @@
         "postLikes": 3
     },
     {
+        "id": 11,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-12-01T19:00:00",
@@ -86,6 +98,7 @@
         "postLikes": 39
     },
     {
+        "id": 12,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-11-20T19:00:00",
@@ -94,6 +107,7 @@
         "postImage": "Shaq_and_Karis.jpg"
     },
     {
+        "id": 13,
         "authorName": "",
         "authorImage": "default_profile_pic.png",
         "dateCreated": "2023-10-20T19:00:00",
